@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCOUNT_ID = "000375135601"
-        AWS_DEFAULT_REGION = "ap-south-1"
-        IMAGE_REPO_NAME = "dokertest"
+        AWS_ACCOUNT_ID = "Your_id"
+        AWS_DEFAULT_REGION = "Your_region"
+        IMAGE_REPO_NAME = "Repo_name"
         IMAGE_TAG = "latest"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
     }
@@ -16,7 +16,7 @@ pipeline {
                     doGenerateSubmoduleConfigurations: false,
                     extensions: [],
                     submoduleCfg: [],
-                    userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/AjiteshNarra03/docker']]
+                    userRemoteConfigs: [[credentialsId: '', url: 'Add_Your_Repo_Url']]
                 ])
             }
         }
